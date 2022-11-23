@@ -56,7 +56,7 @@ nav li a{
 }
 
 
-@media(max-width: 800px){
+@media(max-width: 900px){
     nav{
         padding-right: 15px;
         justify-content: space-between;
@@ -92,7 +92,10 @@ nav li a{
 
 }
 
+
 /*pagina index*/
+
+
 .contenido{
     display: flex;
     width: 100%;
@@ -184,6 +187,8 @@ nav li a{
 
 
 /*pagina loteo natural*/
+
+
 
 .section_lt{
     padding-top: 90px;
@@ -279,75 +284,74 @@ nav li a{
 
 /*pagina vina y bodega*/
 
+.contenido_vb{
+    padding: 100px;
+   
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2 1fr) ;
+    grid-template-rows: repeat(2 1fr);
+    grid-template-areas: " texto1__vb           img1" 
+                         " galeria_vb       galeria_vb";
+}
+
+.galeria_vb{
+    grid-area: galeria_vb;
+    background-color: #b08036;
+}
+
+.img1{
+    grid-area: img1;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.img1__vb{
+    width: 500px;
+}
+
+.texto1__vb{
+    display: flex;
+    flex-direction: column;
+    grid-area: texto1__vb;
+    background-color: burlywood;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto1__parrafo{
+    width: 500px;
+    font-family: 'roboto';
+    font-size: 18px;
+    line-height: 30px;
+    text-align: left;
+    color: #283643
+}
+
 .box1{
     display: flex;
     flex-direction: column;
     width: 400px;
     align-items: center ;
     margin: 10px;
-    border-radius: 10px;
     padding: 10px;
 }
 
 .box1__img{
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    align-items: center ;
-    padding: 5px;
-}
-
-.img1__lt{
-    position: relative;
-    left: 730px;
-    display: flex;
-    flex-direction: column;
-    width: 700px;
-}
-
-.texto1{
-    position: relative;
-    left: 150px;
-    bottom: 350px;
-    display: flex;
-    flex-direction: column;
     width: 400px;
-    align-items: center ;
-    margin: 10px;
-    padding: 10px;
-    
+    border-radius: 10px;
 }
 
-.texto1__parrafo{
-    font-family: 'roboto';
-    font-size: 18px;
-    line-height: 30px;
-    text-align: left;
-    color: #283643
 
-}
-
-.texto1__titulo{
-    position: relative;
-    right: 70px;
-    bottom: 5px;
+.galeria_vb__titulo__cont{
     font-family: 'roboto';
-    font-size: 40px;
+    font-size: 30px;
     color: #283643;
 }
 
-.titulo__cont{
-    position: relative;
-    left: 620px;
-    bottom: 200px;
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    align-items: center ;
-    font-family: 'roboto';
-    font-size: 40px;
-    color: #283643;
-}
+
+
 /*pagina ubicacion*/
 
 
@@ -390,6 +394,8 @@ nav li a{
     font-size: 40px;
     color: #283643;
 }
+
+
 /*pagina contacto*/
 
 
