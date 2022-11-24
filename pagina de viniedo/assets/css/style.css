@@ -250,6 +250,7 @@ nav li a{
 }
 
 .cont{
+    width: 90%;
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-around;
@@ -284,9 +285,11 @@ nav li a{
 
 /*pagina vina y bodega*/
 
+
 .contenido_vb{
-    padding: 100px;
-   
+    padding-top: 100px;
+    padding-left: 5%;
+    width: 95%;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(2 1fr) ;
@@ -294,65 +297,87 @@ nav li a{
     grid-template-areas: " texto1__vb           img1" 
                          " galeria_vb       galeria_vb";
 }
+@media(max-width: 1000px){
+    .contenido_vb{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2 1fr) ;
+        grid-template-rows: repeat(3 1fr);
+        grid-template-areas: " texto1__vb       texto1__vb" 
+                             " img1             img1" 
+                             " galeria_vb       galeria_vb";
+    }
 
-.galeria_vb{
-    grid-area: galeria_vb;
-    background-color: #b08036;
 }
-
 .img1{
     grid-area: img1;
     display: flex;
     justify-content: center;
+    max-width: 700px;
+    min-width: 300px;
     
     
 }
 .img1__vb{
-    width: 500px;
+    width: 100%;
 }
 
 .texto1__vb{
     display: flex;
     flex-direction: column;
     grid-area: texto1__vb;
-    background-color: burlywood;
     justify-content: center;
     align-items: center;
 }
 
 .texto1__parrafo{
-    width: 500px;
+    width: 80%;
+    padding-top: 20px;
     font-family: 'roboto';
     font-size: 18px;
     line-height: 30px;
-    text-align: left;
+    text-align: justify;
     color: #283643
 }
+
+.galeria_vb{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: galeria_vb;
+}
+
 
 .box1{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    max-width: 440px;
+    min-width: 300px;
     align-items: center ;
-    margin: 10px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .box1__img{
-    width: 400px;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center ;
+    
 }
 
 
-.galeria_vb__titulo__cont{
+.galeria_vb__titulo__cont, .texto1__titulo{
     font-family: 'roboto';
     font-size: 30px;
     color: #283643;
 }
 
-
-
 /*pagina ubicacion*/
+
+.box2__cont{
+    padding-top: 100px;
+}
+/*pagina ubicacion
 
 
 .box2__mapa{ 
@@ -394,14 +419,28 @@ nav li a{
     font-size: 40px;
     color: #283643;
 }
-
+*/
 
 /*pagina contacto*/
+.mainContactos{
+    padding-top: 120px;
+}
 
+.contacto__form{
+    padding-top: 100px;
+    padding-left: 5%;
+    background-color: aqua;
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4 1fr);
+    grid-template-areas: "contacto__titulo   contacto__titulo"
+                         "contacto__inp1     contacto__mensaje"
+                         "contacto__inp2     contacto__mensaje"
+                         "submit             contacto__subtitulo";
+}
 
-.contacto{
-    position: relative;
-    top: 200px;
+/*.contacto{
     padding: 10px;
     width: 400px;
     height: 400px;
@@ -416,48 +455,47 @@ nav li a{
     left: 100px;
     
 }
-
+*/
 .contacto__inp1{
-    width: 600px;
+    display: flex;
+    grid-area: contacto__inp1;
+    max-width: 600px;
     height: 50px;
-    position: relative;
-    bottom: 105px;
+    
 }
 
 .contacto__inp2{
+    grid-area: contacto__inp2;
+    display: flex;
+    justify-content: end;
     width: 600px;
     height: 50px;
-    position: relative;
-    bottom: 75px;
+
 }
 .contacto__mensaje{
+    grid-area: contacto__mensaje;
     width: 600px;
     height: 130px;
-    position: relative;
-    bottom: 205px;
-    left: 650px;
+
 }
 
 .submit{
+    grid-area: submit;
     width: 100px;
     height: 30px;
-    position: relative;
-    bottom: 190px;
-    left: 650px;
+
 }
 
 .contacto__titulo{
+    grid-area: contacto__titulo;
     font-family: 'roboto';
     font-size: 40px;
     color: #283643;
-    position: relative;
-    bottom: 150px;
-    left: 100px;
+    
 }
 .contacto__subtitulo{
-    position: relative;
-    bottom: 150px;
-    left: 100px;
+    grid-area:contacto__subtitulo ;
+    
 }
 
 .box3{
